@@ -4,9 +4,10 @@
 
 #### Solutions
 
-| Problem | Name | Rating | Solution |
+| # | Problem | Rating | Solution |
 |---|---|---|---|
-| D | [Tung Tung Sahur](https://codeforces.com/contest/2094/problem/D) | 1100 | [D1100_tung_tung_sahur.rs](./D1100_tung_tung_sahur.rs) |
+| 1 | [Odd Queries](https://codeforces.com/contest/1807/problem/D) | 900 | [900_odd_queries.rs](./900_odd_queries.rs) |
+| 2 | [Tung Tung Sahur](https://codeforces.com/contest/2094/problem/D) | 1100 | [1100_tung_tung_sahur.rs](./1100_tung_tung_sahur.rs) |
 
 ---
 
@@ -16,7 +17,7 @@
 
 #### Structure
 
-###### - Each solution file is named with the format: `{Problem_Letter}{Rating}_{problem_name}.rs`
+###### - Each solution file is named with the format: `{Rating}_{problem_name}.rs`
 ###### - Solutions include helper functions for common competitive programming tasks
 ###### - All solutions are accepted submissions on Codeforces
 
