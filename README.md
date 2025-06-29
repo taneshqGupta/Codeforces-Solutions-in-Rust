@@ -11,15 +11,7 @@
 
 ---
 
-#### About
-
-###### This repository showcases my journey solving competitive programming problems on Codeforces using Rust. Each solution is optimized for competitive programming with fast I/O and efficient algorithms.
-
-#### Structure
-
-###### - Each solution file is named with the format: `{Rating}_{problem_name}.rs`
-###### - Solutions include helper functions for common competitive programming tasks
-###### - All solutions are accepted submissions on Codeforces
+###### Each solution file is named with the format: `{Rating}_{problem_name}.rs`
 
 #### Running the Solutions
 
