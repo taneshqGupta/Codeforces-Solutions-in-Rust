@@ -6,8 +6,9 @@
 
 | # | Problem | Rating | Solution |
 |---|---|---|---|
-| 1 | [Odd Queries](https://codeforces.com/contest/1807/problem/D) | 900 | [900_odd_queries.rs](./900_odd_queries.rs) |
-| 2 | [Tung Tung Sahur](https://codeforces.com/contest/2094/problem/D) | 1100 | [1100_tung_tung_sahur.rs](./1100_tung_tung_sahur.rs) |
+| 1 | [Letter Home](https://codeforces.com/contest/2121/problem/A) | Div. 3 A | [div3A_letter_home.rs](./div3A_letter_home.rs) |
+| 2 | [Odd Queries](https://codeforces.com/contest/1807/problem/D) | 900 | [900_odd_queries.rs](./900_odd_queries.rs) |
+| 3 | [Tung Tung Sahur](https://codeforces.com/contest/2094/problem/D) | 1100 | [1100_tung_tung_sahur.rs](./1100_tung_tung_sahur.rs) |
 
 ---
 
