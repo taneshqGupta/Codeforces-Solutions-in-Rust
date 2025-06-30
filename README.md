@@ -10,6 +10,7 @@
 | 2 | [Odd Queries](https://codeforces.com/contest/1807/problem/D) | 900 | [900_odd_queries.rs](./900_odd_queries.rs) |
 | 3 | [Tung Tung Sahur](https://codeforces.com/contest/2094/problem/D) | 1100 | [1100_tung_tung_sahur.rs](./1100_tung_tung_sahur.rs) |
 | 4 | [Above the Clouds](https://codeforces.com/contest/2121/problem/B) | Div. 3 B | [div3B_above_the_clouds.rs](./div3B_above_the_clouds.rs) |
+| 5 | [Those Who Are With Us](https://codeforces.com/contest/2121/problem/C) | Div. 3 C | [div3C_those_who_are_with_us.rs](./div3C_those_who_are_with_us.rs) |
 
 ---
 
