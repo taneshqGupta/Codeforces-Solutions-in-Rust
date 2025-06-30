@@ -13,7 +13,6 @@
 ---
 
 ###### Each solution file is named with the format: `{Rating}_{problem_name}.rs`
-###### Solutions are sorted based on rating.
 ###### All Solutions are accepted submissions on codeforces. 
 
 #### Running the Solutions
