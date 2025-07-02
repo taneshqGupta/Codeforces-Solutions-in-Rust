@@ -14,6 +14,7 @@
 | 6 | [1709](https://codeforces.com/contest/2121/problem/D) | Div. 3 D | [div3D_1709.rs](./div3D_1709.rs) |
 | 7 | [Sponsor of Your Problems](https://codeforces.com/contest/2121/problem/E) | Div. 3 E | [div3E_sponsor_of_your_problems.rs](./div3E_sponsor_of_your_problems.rs) |
 | 8 | [Blackboard Game](https://codeforces.com/contest/2123/problem/A) | Div. 3 A | [div3A_blackboard_game.rs](./div3A_blackboard_game.rs) |
+| 9 | [Tournament](https://codeforces.com/contest/2123/problem/B) | Div. 3 B | [div3B_tournament.rs](./div3B_tournament.rs) |
 
 ---
 
