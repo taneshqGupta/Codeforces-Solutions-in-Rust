@@ -16,6 +16,8 @@
 | 8 | [`Blackboard Game`](https://codeforces.com/contest/2123/problem/A) | Div. 3 A | [`div3A_blackboard_game.rs`](./div3A_blackboard_game.rs) |
 | 9 | [`Tournament`](https://codeforces.com/contest/2123/problem/B) | Div. 3 B | [`div3B_tournament.rs`](./div3B_tournament.rs) |
 | 10 | [`Prefix Min, Suffix Max`](https://codeforces.com/contest/2123/problem/C) | Div. 3 C | [`div3C_prefix_min_suffix_max.rs`](./div3C_prefix_min_suffix_max.rs) |
+| 11 | [`Greedy Grid`](https://codeforces.com/contest/2122/problem/A) | Div. 2 A | [`div2A_greedy_grid.rs`](./div2A_greedy_grid.rs) |
+| 12 | [`Pile Shuffling`](https://codeforces.com/contest/2122/problem/B) | Div. 2 B | [`div2B_pile_shuffling.rs`](./div2B_pile_shuffling.rs) |
 
 ---
 
