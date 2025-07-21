@@ -19,7 +19,7 @@ fn main() {
         let n: usize = cin.next();
         let mut ans: usize = 0;
         for _ in 0..n {
-            let [a, b, c, d]: [usize; 4]= cin.get();
+            let [a, b, c, d]: [usize; 4] = cin.get();
             if a > c && b > d {
                 ans += a - c;
                 ans += b - d;
