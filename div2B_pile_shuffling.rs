@@ -1,29 +1,45 @@
-#[derive(Default)]
-struct Scanner(Vec<String>);
+#[derive(Default, Debug)]
+pub struct Scanner(Vec<String>);
+macro_rules! methods {
+    ($(($get:ident, $get_n:ident): $ty:ty),*) => {
+        $(
+            pub fn $get(&mut self) -> $ty {
+                self.next()
+            }
+            pub fn $get_n<const N: usize>(&mut self) -> [$ty; N] {
+                std::array::from_fn(|_| self.next())
+            }
+        )*
+    }
+}
 impl Scanner {
     fn next<T: std::str::FromStr>(&mut self) -> T {
         loop {
-            if let Some(token) = self.0.pop() {
-                return token.parse().ok().unwrap();
+            if let Some(c) = self.0.pop() {
+                return c.parse().ok().unwrap();
             }
-            let mut input = String::new();
-            std::io::stdin().read_line(&mut input).unwrap();
-            self.0 = input.split_whitespace().rev().map(String::from).collect();
+            let mut s = String::new();
+            std::io::stdin().read_line(&mut s).unwrap();
+            self.0 = s.split_whitespace().rev().map(String::from).collect();
         }
     }
-    fn get<T: std::str::FromStr, const N: usize>(&mut self) -> [T; N] {
-        std::array::from_fn(|_| self.next())
-    }
+    methods!(
+        (num, nums): usize,
+        (int, ints): isize,
+        (string, strings): String,
+        (char, chars): char,
+        (float, floats): f64
+    );
 }
 
 fn main() {
     let mut cin = Scanner::default();
-    let t: usize = cin.next();
+    let t = cin.num();
     for _ in 0..t {
-        let n: usize = cin.next();
-        let mut ans: usize = 0;
+        let n = cin.num();
+        let mut ans = 0;
         for _ in 0..n {
-            let [a, b, c, d]: [usize; 4] = cin.get();
+            let [a, b, c, d] = cin.nums();
             if a > c && b > d {
                 ans += a - c;
                 ans += b - d;
@@ -37,6 +53,6 @@ fn main() {
                 continue;
             }
         }
-        print!("{}\n", ans);
+        println!("{}", ans);
     }
 }
