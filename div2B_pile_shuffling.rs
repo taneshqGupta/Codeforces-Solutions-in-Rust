@@ -8,7 +8,7 @@ impl Scanner {
         self.0.pop().unwrap().parse().ok().unwrap()
     }
     fn get<T: std::str::FromStr, const N: usize>(&mut self) -> [T; N] {
-        std::array::from_fn(|_| self.next::<T>())
+        std::array::from_fn(|_| self.next())
     }
 }
 
