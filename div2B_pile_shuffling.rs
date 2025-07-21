@@ -1,11 +1,15 @@
+#[derive(Default)]
 struct Scanner(Vec<String>);
 impl Scanner {
-    fn new() -> Self {
-        let input = std::io::read_to_string(std::io::stdin()).unwrap();
-        Scanner(input.split_whitespace().map(String::from).rev().collect())
-    }
     fn next<T: std::str::FromStr>(&mut self) -> T {
-        self.0.pop().unwrap().parse().ok().unwrap()
+        loop {
+            if let Some(token) = self.0.pop() {
+                return token.parse().ok().unwrap();
+            }
+            let mut input = String::new();
+            std::io::stdin().read_line(&mut input).unwrap();
+            self.0 = input.split_whitespace().rev().map(String::from).collect();
+        }
     }
     fn get<T: std::str::FromStr, const N: usize>(&mut self) -> [T; N] {
         std::array::from_fn(|_| self.next())
@@ -13,7 +17,7 @@ impl Scanner {
 }
 
 fn main() {
-    let mut cin = Scanner::new();
+    let mut cin = Scanner::default();
     let t: usize = cin.next();
     for _ in 0..t {
         let n: usize = cin.next();
@@ -33,6 +37,6 @@ fn main() {
                 continue;
             }
         }
-        println!("{}", ans);
+        print!("{}\n", ans);
     }
 }
