@@ -1,17 +1,5 @@
 #[derive(Default, Debug)]
-pub struct Scanner(Vec<String>);
-macro_rules! methods {
-    ($(($get:ident, $get_n:ident): $ty:ty),*) => {
-        $(
-            pub fn $get(&mut self) -> $ty {
-                self.next()
-            }
-            pub fn $get_n<const N: usize>(&mut self) -> [$ty; N] {
-                std::array::from_fn(|_| self.next())
-            }
-        )*
-    }
-}
+struct Scanner(Vec<String>);
 impl Scanner {
     fn next<T: std::str::FromStr>(&mut self) -> T {
         loop {
@@ -23,23 +11,16 @@ impl Scanner {
             self.0 = s.split_whitespace().rev().map(String::from).collect();
         }
     }
-    methods!(
-        (num, nums): usize,
-        (int, ints): isize,
-        (string, strings): String,
-        (char, chars): char,
-        (float, floats): f64
-    );
 }
 
 fn main() {
     let mut cin = Scanner::default();
-    let t = cin.num();
+    let t: usize = cin.next();
     for _ in 0..t {
-        let n = cin.num();
+        let n: usize = cin.next();
         let mut ans = 0;
         for _ in 0..n {
-            let [a, b, c, d] = cin.nums();
+            let [a, b, c, d] = std::array::from_fn(|_| cin.next::<usize>());
             if a > c && b > d {
                 ans += a - c;
                 ans += b - d;
