@@ -7,6 +7,9 @@ impl Scanner {
     fn next<T: std::str::FromStr>(&mut self) -> T {
         self.0.pop().unwrap().parse().ok().unwrap()
     }
+    fn get<T: std::str::FromStr, const N: usize>(&mut self) -> [T; N] {
+        std::array::from_fn(|_| self.next::<T>())
+    }
 }
 
 fn main() {
@@ -16,23 +19,17 @@ fn main() {
         let n: usize = cin.next();
         let mut ans: usize = 0;
         for _ in 0..n {
-            let a: usize = cin.next();
-            let b: usize = cin.next();
-            let c: usize = cin.next();
-            let d: usize = cin.next();
+            let [a, b, c, d]: [usize; 4]= cin.get();
             if a > c && b > d {
                 ans += a - c;
                 ans += b - d;
                 ans += c;
-            }
-            else if a > c {
+            } else if a > c {
                 ans += a - c;
-            }
-            else if b > d {
+            } else if b > d {
                 ans += a;
                 ans += b - d;
-            }
-            else {
+            } else {
                 continue;
             }
         }
