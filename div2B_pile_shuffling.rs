@@ -15,7 +15,7 @@ impl Scanner {
 
 fn main() {
     let mut cin = Scanner::default();
-    let t: usize = cin.next();
+    let t = cin.next();
     for _ in 0..t {
         let n: usize = cin.next();
         let mut ans = 0;
