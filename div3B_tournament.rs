@@ -1,37 +1,39 @@
+use std::array;
+
+#[derive(Default, Debug)]
 struct Scanner(Vec<String>);
 impl Scanner {
-    fn new() -> Self {
-        let input = std::io::read_to_string(std::io::stdin()).unwrap();
-        Scanner(input.split_whitespace().map(String::from).rev().collect())
-    }
     fn next<T: std::str::FromStr>(&mut self) -> T {
-        self.0.pop().unwrap().parse().ok().unwrap()
+        loop {
+            if let Some(c) = self.0.pop() {
+                return c.parse().ok().unwrap();
+            }
+            let mut s = String::new();
+            std::io::stdin().read_line(&mut s).unwrap();
+            self.0 = s.split_whitespace().rev().map(String::from).collect();
+        }
     }
 }
 
 fn main() {
-    let mut cin = Scanner::new();
-    let t: usize = cin.next();
+    let mut cin = Scanner::default();
+    let t = cin.next();
     for _ in 0..t {
-        let (n, j, k): (usize, usize, usize) = (cin.next(), cin.next(), cin.next());
+        let [n, j, k] = array::from_fn(|_| cin.next::<usize>());
         let a: Vec<usize> = (0..n).map(|_| cin.next()).collect();
 
         let mx = *a.iter().max().unwrap();
 
         let ans;
 
-        if k == 1 && a[j-1] == mx {
+        if k == 1 && a[j - 1] == mx {
             ans = "yes";
-        }
-
-        else if k == 1 {
+        } else if k == 1 {
             ans = "no";
-        }
-
-        else {
+        } else {
             ans = "yes";
         }
 
-        println!("{}", ans);
+        print!("{}\n", ans);
     }
 }
